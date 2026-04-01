@@ -1,10 +1,9 @@
-from unittest.mock import patch
 import base64
+from unittest.mock import patch
 
 import pytest
-from pydantic import HttpUrl
-
 from intel471.backend import BackendName, get_client
+from pydantic import HttpUrl
 
 BACKENDS = [
     pytest.param(BackendName.TITAN, "intel471.backend.titan_client", id="titan"),
